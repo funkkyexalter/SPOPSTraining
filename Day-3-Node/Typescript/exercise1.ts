@@ -1,18 +1,11 @@
 /*
 Create a program to manage a photobook using oops
+To start, create a class called PhotoBook with a private attribute numPages of type int.
+It must also have a public method GetNumberPages that will return the number of photo book pages.
 
- 
+ The default constructor will create an album with 16 pages. There will be an additional constructor, with which we can specify the number of pages we want in the album.
 
-
-To start, create a class called PhotoBook with a private attribute numPages of type int. It must also have a public method GetNumberPages that will return the number of photo book pages.
-
- 
-
-The default constructor will create an album with 16 pages. There will be an additional constructor, with which we can specify the number of pages we want in the album.
-
- 
-
-There is also a BigPhotoBook class whose constructor will create an album with 64 pages.
+ There is also a BigPhotoBook class whose constructor will create an album with 64 pages.
 
  
 
@@ -34,8 +27,8 @@ class Photobook{
             this.numPages = num
         }
     }
-    public GetNumberPages():number{
-        return this.numPages;
+    public GetNumberPages():string {
+        return "The number of pages = " + this.numPages +"\n";
     }
 }
 class BigPhotoBook extends Photobook{
@@ -45,5 +38,17 @@ class BigPhotoBook extends Photobook{
 }
 
 class PhotoBookTest {
-
+    public defaultPhotoBook = new Photobook();
+    public bitBiggerPhotoBook = new Photobook(24);
+    public largePhotoBook = new BigPhotoBook(200);
+    
+    
+    public showPages(){
+        console.log(this.defaultPhotoBook.GetNumberPages());
+        console.log(this.bitBiggerPhotoBook.GetNumberPages());
+        console.log(this.largePhotoBook.GetNumberPages());
+    }
 }
+
+var phoneBookTest = new PhotoBookTest();
+phoneBookTest.showPages();
