@@ -12,7 +12,12 @@ It must also have a public method GetNumberPages that will return the number of 
 Finally create a PhotoBookTest class to perform the following actions:
 
  
+[2:23 PM] Vikash Verma (Guest)
+    tsc --module commonjs TestShape.js
+​[2:23 PM] Vikash Verma (Guest)
+    tsc --module amd Testshape.ts
 
+    
 Create a default photo book and show the number of pages
 Create a photo book with 24 pages and show the number of pages
 Create a large photo book and show the number of pages
